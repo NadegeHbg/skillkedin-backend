@@ -1,0 +1,27 @@
+{
+  "name": "skillkedin-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NadegeHbg/skillkedin-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NadegeHbg/skillkedin-backend/issues"
+  },
+  "homepage": "https://github.com/NadegeHbg/skillkedin-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongo": "^0.1.0",
+    "mongoose": "^7.0.1"
+  }
+}
