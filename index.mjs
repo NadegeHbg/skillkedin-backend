@@ -6,6 +6,8 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import create_questions from "./controller/addData.mjs";
 import getQuestions from "./controller/getData.mjs";
+import data from "./controller/data.mjs";
+
 
 const app = express();
 app.use(express.json());//req.body
@@ -25,10 +27,13 @@ app.get("/", (req, res) => {
         res.status(200).send("Engine Started, Ready to take off!");
 })
 
-app.post("/adddata",create_questions)
+// app.post("/adddata",create_questions)
 
 app.get("/data",getQuestions)
+
+// app.get("/getdata", data)
 
 app.listen(8000, ()=>{
     console.log("server started on port 8000")
 })
+
