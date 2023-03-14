@@ -7,6 +7,8 @@ import bodyParser from "body-parser";
 import create_questions from "./controller/addData.mjs";
 import getQuestions from "./controller/getData.mjs";
 import data from "./controller/data.mjs";
+import getCategory from "./controller/getCategory.mjs";
+import getCategoryTypes from "./controller/typesOfCategory.mjs";
 
 
 const app = express();
@@ -15,7 +17,7 @@ dotenv.config();
 dbConnect();
 
 
-app.use(cors({origin:['','http://localhost:3000']}));
+app.use(cors({origin:['','http://localhost:5173']}));
 
 app.use(
     bodyParser.urlencoded({
@@ -25,13 +27,19 @@ app.use(
 
 app.get("/", (req, res) => {
         res.status(200).send("Engine Started, Ready to take off!");
+        
 })
 
 // app.post("/adddata",create_questions)
 
 app.get("/data",getQuestions)
 
+//get types of category
+app.get("/category",getCategoryTypes)
+
 // app.get("/getdata", data)
+
+app.get("/getCategory/:category",getCategory)
 
 app.listen(8000, ()=>{
     console.log("server started on port 8000")
